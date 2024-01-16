@@ -59,6 +59,7 @@ public class CustomerController {
 
 	@PostMapping("/withdraw/{aadharNo}")
 	public ResponseEntity<Customer> withdrawMoney(@PathVariable ("aadharNo") String aadharNo, @RequestBody Withdraw withdrawRequest) {
+		System.out.println("HII");
 		return customerService.withdrawMoney(aadharNo, withdrawRequest);
 	}
 
